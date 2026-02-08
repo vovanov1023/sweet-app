@@ -1,0 +1,179 @@
+/* src/pages/HomeworkPage.css */
+
+.homework-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* === ТАБИ === */
+.hw-tabs {
+    display: flex;
+    background: white;
+    padding: 4px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.hw-tab {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.hw-tab.active {
+    background: var(--secondary-container);
+    color: var(--primary);
+}
+
+.hw-count-badge {
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* === ФІЛЬТРИ === */
+.hw-filters {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    /* Приховуємо скролбар, але залишаємо функціонал */
+    scrollbar-width: none;
+}
+.hw-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chip {
+    padding: 6px 16px;
+    border: 1px solid var(--on-surface-variant-lighter);
+    background: white;
+    border-radius: 16px;
+    font-size: 13px;
+    color: var(--on-surface-variant);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-chip.selected {
+    background: var(--on-surface);
+    color: white;
+    border-color: var(--on-surface);
+}
+
+/* === КАРТКИ ЗАВДАНЬ === */
+.hw-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hw-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.hw-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hw-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.hw-subject {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+    background: var(--secondary-container);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.hw-deadline {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--on-surface-variant);
+}
+
+.hw-deadline.urgent {
+    color: #eab308;
+    font-weight: 500;
+}
+
+.hw-deadline.overdue {
+    color: #da2f2f;
+    font-weight: 500;
+}
+
+.hw-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0 0 12px 0;
+}
+
+.hw-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--on-surface-variant);
+    margin: 0;
+    padding: 8px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+}
+
+.hw-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hw-type-badge {
+    font-size: 12px;
+    color: var(--on-surface-variant);
+}
+
+.arrow-icon {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.no-hw-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--on-surface-variant);
+}
+.no-hw-state .material-symbols-outlined {
+    font-size: 48px;
+    color: #22c55e;
+    margin-bottom: 16px;
+}

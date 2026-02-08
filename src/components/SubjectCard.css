@@ -1,0 +1,156 @@
+/* src/components/SubjectCard.css */
+
+.subject-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.subject-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.subject-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.subject-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subject-card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0;
+}
+
+.subject-card-teacher {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.subject-card-average {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Кольори для середнього балу */
+.grade-high {
+    background: #dcfce7; /* green 100 */
+    color: #16a34a; /* green 600 */
+}
+.grade-medium {
+    background: #fef9c3; /* yellow 100 */
+    color: #ca8a04; /* yellow 600 */
+}
+.grade-low {
+    background: #ffedd5; /* orange 100 */
+    color: #f97316; /* orange 600 */
+}
+.grade-very-low {
+    background: #fee2e2; /* red 100 */
+    color: #dc2626; /* red 600 */
+}
+
+.subject-card-grades {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grades-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+}
+
+.grades-list {
+    display: flex;
+    flex-direction: column; /* Змінено з row на column */
+    gap: 12px; /* Збільшено відступ */
+    flex-wrap: nowrap; /* Більше не загортаємо */
+}
+
+/* === НОВІ СТИЛІ ДЛЯ ОЦІНОК === */
+
+.grade-item-detailed {
+    background: var(--secondary-container);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: background-color 0.2s;
+}
+
+.subject-card:hover .grade-item-detailed {
+    background-color: #E0D8F0; /* Трохи темніший фон при ховері на картку */
+}
+
+.grade-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grade-item-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    min-width: 22px; /* Для вирівнювання */
+    text-align: center;
+}
+
+.grade-item-type {
+    background: rgba(103, 80, 164, 0.2); /* Світлий фон */
+    color: var(--primary);
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.grade-item-date {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+    margin-left: auto; /* Притискає дату вправо */
+    white-space: nowrap;
+}
+
+.grade-item-comment {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--on-surface-variant);
+    width: 100%;
+    overflow: hidden; /* Ховаємо те, що не влазить */
+}
+
+.grade-item-comment .material-symbols-outlined {
+    font-size: 16px;
+    flex-shrink: 0; /* Іконка не стискається */
+}
+
+.grade-item-comment span:last-child {
+    white-space: nowrap; /* Текст в один рядок */
+    overflow: hidden; /* Ховаємо */
+    text-overflow: ellipsis; /* ... в кінці */
+    min-width: 0; /* Магія для flex + ellipsis */
+}

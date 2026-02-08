@@ -1,0 +1,170 @@
+/* src/pages/TeacherLessonEditorPage.css */
+
+.lesson-editor-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editor-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px; /* Відступ між групами */
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--on-surface-variant-lighter);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.link-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.link-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--primary);
+}
+.form-input.with-icon {
+    padding-left: 40px; /* Місце для іконки */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-input.short {
+    max-width: 150px; /* Для поля з часом */
+}
+
+.form-hint {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.editor-attach-btn {
+    /* Використовуємо стилі з LessonDetailPage.css */
+    align-self: flex-start;
+}
+
+.save-lesson-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 12px;
+}
+
+.save-lesson-btn:hover {
+    background: #5a3f93; /* Темніший */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+}
+
+.save-lesson-btn .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.time-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.time-suffix {
+    position: absolute;
+    right: 12px;
+    color: var(--on-surface-variant);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* Індикатор навантаження */
+.workload-indicator-box {
+    margin-top: 16px;
+    padding: 16px;
+    background: #FAFAFA;
+    border: 2px solid #E0E0E0; /* Буде перезаписано інлайновим стилем */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.workload-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.workload-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.workload-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--on-surface);
+}
+
+.workload-progress-bg {
+    height: 8px;
+    background: #E0E0E0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.workload-progress-fill {
+    height: 100%;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+}
+
+.workload-hint {
+    font-size: 11px;
+    color: var(--on-surface-variant);
+    margin: 0;
+    font-style: italic;
+}

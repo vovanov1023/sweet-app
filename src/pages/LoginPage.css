@@ -1,0 +1,106 @@
+/* src/pages/LoginPage.css */
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    padding: 20px;
+    text-align: center;
+}
+
+.login-logo {
+    font-size: 64px;
+    margin-bottom: 16px;
+    color: var(--primary);
+    /* Анімація появи */
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.login-title {
+    font-size: 32px;
+    color: var(--on-surface);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.login-subtitle {
+    color: var(--on-surface-variant);
+    margin-bottom: 48px;
+    font-size: 16px;
+}
+
+.login-roles-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    /* Адаптив для мобілок */
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.role-card {
+    background: white;
+    border: 1px solid var(--secondary-container);
+    border-radius: 16px;
+    padding: 32px 24px;
+    flex: 1;
+    min-width: 200px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(103, 80, 164, 0.15); /* Тінь кольору primary */
+    border-color: var(--primary);
+}
+
+.role-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-container);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 40px; /* Розмір Material Icon */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.role-card:hover .role-icon {
+    background: var(--primary);
+    color: white;
+}
+
+.role-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--on-surface);
+}
+
+.role-desc {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+/* Анімації */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,250 @@
+/* src/pages/SubjectDetailPage.css */
+
+.subject-detail-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Використовуємо той самий хедер, що і на LessonDetailPage,
+   але додаємо специфічний клас для налаштувань */
+.subject-detail-header .detail-meta {
+    gap: 8px; /* Менший відступ */
+}
+
+.subject-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    background: var(--secondary-container);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.subject-stats-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.subject-stats-item .stats-label {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.subject-stats-item .stats-value-small {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.full-grades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.full-grade-item {
+    background: white;
+    border: 1px solid var(--on-surface-variant-lighter);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.full-grade-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.full-grade-value {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary);
+    min-width: 40px;
+    text-align: center;
+}
+
+.full-grade-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.full-grade-type {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.full-grade-date {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.full-grade-comment {
+    margin-top: 12px;
+    padding: 12px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+.full-grade-comment .material-symbols-outlined {
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.no-grades-message {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+    text-align: center;
+    padding: 20px;
+}
+
+.full-absences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.full-absence-item {
+    background: white;
+    border: 1px solid var(--on-surface-variant-lighter);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.full-absence-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.full-absence-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.full-absence-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.full-absence-type {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.full-absence-date {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.full-absence-comment {
+    margin-top: 12px;
+    padding: 12px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+.full-absence-comment .material-symbols-outlined {
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.calculator-box {
+    background: var(--background);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px dashed var(--primary);
+}
+
+.calc-hint {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+    margin-bottom: 12px;
+}
+
+.calc-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.calc-input {
+    width: 80px;
+    padding: 10px;
+    border: 2px solid var(--secondary-container);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.calc-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.calc-btn {
+    flex: 1;
+    background: var(--secondary-container);
+    color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calc-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.calc-result {
+    display: flex;
+    gap: 12px;
+    background: #e0e7ff; /* light indigo */
+    padding: 12px;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.calc-result .material-symbols-outlined {
+    color: #4338ca;
+    font-size: 20px;
+}
+
+.calc-result p {
+    margin: 0;
+    font-size: 14px;
+    color: #312e81;
+    line-height: 1.4;
+    white-space: pre-line; /* Щоб працювали переноси рядків */
+}

@@ -1,0 +1,123 @@
+/* src/components/JournalPopover.css */
+
+.popover-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: transparent; /* Можна зробити rgba(0,0,0,0.1) для затемнення */
+}
+
+.popover-content {
+    position: fixed; /* Важливо для позиціонування відносно вікна */
+    z-index: 1000;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid var(--secondary-container);
+    min-width: 160px;
+    animation: popIn 0.1s ease-out;
+    overflow: hidden;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.popover-title {
+    padding: 8px 12px;
+    background: var(--secondary-container);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.popover-body {
+    padding: 8px;
+}
+
+/* Сітка для оцінок */
+.grades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.grade-option-btn {
+    border: 1px solid var(--on-surface-variant-lighter);
+    background: white;
+    padding: 8px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--on-surface);
+    transition: all 0.1s;
+    font-size: 14px;
+}
+
+.grade-option-btn:hover {
+    background: var(--secondary-container);
+    color: var(--primary);
+}
+
+.grade-option-btn.special {
+    background: #fff1f2;
+    color: #e11d48;
+    border-color: #fecdd3;
+}
+
+/* Список для типів уроків */
+.types-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.type-option-btn {
+    text-align: left;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.type-option-btn:hover {
+    background: var(--secondary-container);
+}
+
+.type-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.popover-comment-section {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--secondary-container);
+}
+
+.popover-comment-input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--on-surface-variant-lighter);
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.popover-comment-input:focus {
+    outline: 2px solid var(--primary);
+    border-color: transparent;
+}

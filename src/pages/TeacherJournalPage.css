@@ -1,0 +1,220 @@
+/* src/pages/TeacherJournalPage.css */
+
+.journal-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.journal-selectors {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.journal-select {
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 2px solid var(--secondary-container);
+    border-radius: 8px;
+    background: white;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.journal-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.journal-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid var(--secondary-container);
+}
+
+.journal-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.journal-table th,
+.journal-table td {
+    border: 1px solid var(--secondary-container);
+    text-align: left;
+    height: 48px;
+}
+
+.journal-table th.student-name-header,
+.journal-table td.student-name-cell {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 1;
+
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+
+    font-weight: 500;
+    padding: 0 8px;
+    border-right: 2px solid var(--secondary-container);
+}
+
+/* Контейнер всередині комірки */
+.journal-table td.student-name-cell .contents {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+}
+
+.student-index {
+    text-align: left;
+    display: inline-block;
+    width: 25px;
+    color: var(--on-surface-variant);
+    font-size: 13px;
+}
+
+/* Заголовки дат */
+.date-header {
+    text-align: center;
+    vertical-align: middle;
+    min-width: 65px;
+    font-weight: 500;
+    padding: 8px;
+    border-bottom-width: 2px;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.date-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+}
+
+.date-cell .date-type {
+    font-size: 11px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Клітинки для оцінок */
+.grade-cell {
+    vertical-align: middle;
+}
+
+.clickable {
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.1s;
+}
+
+.clickable:hover {
+    background-color: #f3f4f6;
+}
+
+/* Відображення оцінки */
+.grade-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Кольори тексту оцінок */
+.grade-display.high { color: #15803d; }
+.grade-display.medium { color: #f6c502; }
+.grade-display.low { color: #df6203; }
+.grade-display.bad { color: #b91c1c; }
+
+.report-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    opacity: 0.5;
+    transition: all 0.2s;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.report-btn:hover {
+    opacity: 1;
+    background-color: var(--secondary-container);
+    transform: scale(1.1);
+}
+
+.report-btn .material-symbols-outlined {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .journal-table th.student-name-header,
+    .journal-table td.student-name-cell {
+        width: 150px;
+        max-width: 150px;
+        min-width: 150px;
+    }
+}
+
+.date-header:hover {
+    background-color: var(--secondary-container);
+}
+
+/* Контрольна (Червоний) */
+.date-header.header-kr {
+    background-color: #fee2e2;
+    border-bottom: 3px solid #dc2626;
+}
+.date-header.header-kr .date-type {
+    color: #dc2626;
+    font-weight: 800;
+}
+
+/* Самостійна (Жовтий) */
+.date-header.header-sr {
+    background-color: #fef9c3;
+    border-bottom: 3px solid #ca8a04;
+}
+.date-header.header-sr .date-type {
+    color: #ca8a04;
+    font-weight: 700;
+}
+
+/* Тематична (Фіолетовий) */
+.date-header.header-theme {
+    background-color: #f3e8ff;
+    border-bottom: 3px solid #7e22ce;
+}
+.date-header.header-theme .date-type {
+    color: #7e22ce;
+    font-weight: 800;
+}
+
+/* Практична (Синій) */
+.date-header.header-pz {
+    background-color: #dbeafe;
+    border-bottom: 3px solid #2563eb;
+}
+.date-header.header-pz .date-type {
+    color: #2563eb;
+    font-weight: 700;
+}

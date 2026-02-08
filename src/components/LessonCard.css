@@ -1,0 +1,261 @@
+/* LessonCard.css - Спільні стилі для карток уроків */
+
+.lesson-card-component {
+    background: var(--secondary-container);
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    border-radius: 12px;
+}
+
+.lesson-card-component:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-card-component:active {
+    transform: scale(0.98);
+}
+
+.lesson-time-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 50px;
+}
+
+.lesson-number-component {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--primary);
+}
+
+.lesson-time-component {
+    font-size: 11px;
+    color: var(--on-surface-variant);
+    text-align: center;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.lesson-main-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lesson-subject-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.lesson-subject-component {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--on-surface);
+    flex: 1;
+    margin: 0 8px 0 0;
+}
+
+.lesson-type-component {
+    color: var(--on-surface-variant);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.grade-value {
+    color: var(--on-surface);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.grade-label-component {
+    color: var(--on-surface-variant);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.lesson-room-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--secondary-container);
+    color: var(--on-surface-variant);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-left: auto; /* Притискає вправо */
+}
+
+.lesson-room-badge .material-symbols-outlined {
+    font-size: 14px;
+}
+
+.lesson-grade-badge {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.lesson-details {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.lesson-room,
+.lesson-teacher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.lesson-room .material-symbols-outlined,
+.lesson-teacher .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.lesson-topic-preview {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0;
+}
+
+.lesson-homework-preview {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.homework-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.homework-icon-wrapper .material-symbols-outlined {
+    font-size: 20px;
+    color: white;
+    font-variation-settings: 'FILL' 0;
+}
+.homework-title-preview.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.homework-preview-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.homework-title-preview {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.homework-deadline-preview {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--on-surface-variant);
+}
+
+.homework-deadline-preview .material-symbols-outlined {
+    font-size: 14px;
+}
+
+.materials-preview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid var(--on-surface-variant-lighter);
+    padding-top: 10px;
+}
+
+.material-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.material-preview-item .material-symbols-outlined {
+    font-size: 16px;
+    color: var(--primary);
+}
+
+.join-meet-btn {
+    background: #e0e7ff; /* Світло-синій */
+    color: #4f46e5; /* Синій */
+    border: 1px solid #4f46e5;
+    border-radius: 20px;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: auto; /* Притискає вправо */
+    animation: pulse-border 2s infinite;
+}
+
+.join-meet-btn:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+.join-meet-btn .material-symbols-outlined {
+    font-size: 16px;
+}
+
+@keyframes pulse-border {
+    0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(79, 70, 229, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+}

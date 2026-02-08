@@ -1,0 +1,558 @@
+/* LessonDetailPage.css */
+
+.lesson-detail-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========== HEADER ========== */
+
+.detail-header {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    margin-bottom: 16px;
+}
+
+.back-button:hover {
+    background-color: var(--secondary-container);
+}
+
+.back-button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.detail-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-subject {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0;
+}
+
+.detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--on-surface-variant);
+    font-size: 14px;
+}
+
+.detail-meta .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* ========== CONTENT ========== */
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0 0 20px 0;
+}
+
+.section-title .material-symbols-outlined {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+/* ========== ІНФОРМАЦІЯ ПРО УРОК ========== */
+
+.info-card {
+    padding: 16px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+}
+
+.lesson-topic {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0 0 12px 0;
+}
+
+.lesson-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--on-surface-variant);
+    margin: 0;
+}
+
+/* ========== МАТЕРІАЛИ ========== */
+
+.materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.material-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--on-surface);
+    transition: all 0.2s;
+}
+
+.material-item:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateX(4px);
+}
+
+.material-icon {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.material-item:hover .material-icon,
+.material-item:hover .material-symbols-outlined {
+    color: white;
+}
+
+.material-title {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.material-item .material-symbols-outlined:last-child {
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+/* ========== ДОМАШНЄ ЗАВДАННЯ ========== */
+
+.homework-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.homework-header-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.homework-title-detail {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--on-surface);
+    margin: 0;
+    flex: 1;
+}
+
+.homework-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.homework-status.completed {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.homework-status.pending {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.homework-status .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.homework-description-detail {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--on-surface-variant);
+    margin: 0;
+    padding: 16px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+}
+
+.homework-deadline-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--on-surface-variant);
+    font-size: 14px;
+}
+
+.homework-deadline-detail .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* Форма здачі */
+.homework-submit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--on-surface-variant-lighter);
+}
+
+.submit-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.submit-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--on-surface-variant-lighter);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.submit-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.submit-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.attach-file-btn,
+.submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.attach-file-btn {
+    background: var(--secondary-container);
+    color: var(--primary);
+}
+
+.attach-file-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #5a3f93;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(103, 80, 164, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ========== ОЦІНКИ ========== */
+
+.grades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.grade-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--secondary-container);
+    border-radius: 8px;
+}
+
+.grade-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.grade-type {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.grade-date {
+    font-size: 12px;
+    color: var(--on-surface-variant);
+}
+
+.grade-value-large {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--primary);
+    min-width: 60px;
+    text-align: center;
+}
+
+.grade-comment {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.grade-comment .material-symbols-outlined {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* ========== КОМЕНТАРІ ========== */
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.comment-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--on-surface-variant-lighter);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.comment-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.comment-submit-btn {
+    align-self: flex-end;
+    padding: 10px 24px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comment-submit-btn:hover:not(:disabled) {
+    background: #5a3f93;
+    transform: translateY(-2px);
+}
+
+.comment-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 12px;
+}
+
+.comment-avatar {
+    flex-shrink: 0;
+}
+
+.comment-avatar .material-symbols-outlined {
+    font-size: 40px;
+    color: var(--on-surface-variant);
+}
+
+.comment-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.comment-author {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--on-surface);
+}
+
+.comment-role {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.comment-role.teacher {
+    background: var(--secondary-container);
+    color: var(--primary);
+}
+
+.comment-role.student {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: var(--on-surface-variant);
+    margin-left: auto;
+}
+
+.comment-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--on-surface-variant);
+    margin: 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--on-surface-variant);
+}
+
+.no-comments .material-symbols-outlined {
+    font-size: 48px;
+    margin-bottom: 12px;
+    opacity: 0.5;
+}
+
+.no-comments p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.see-all-grades-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    margin-top: -10px;
+    transition: background-color 0.2s;
+}
+
+.see-all-grades-btn:hover {
+    background-color: var(--secondary-container);
+}
+
+.see-all-grades-btn .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* ========== АДАПТИВ ========== */
+
+@media (max-width: 768px) {
+    .detail-subject {
+        font-size: 24px;
+    }
+
+    .homework-header-detail {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .submit-actions {
+        flex-direction: column;
+    }
+
+    .attach-file-btn,
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .grade-item {
+        flex-wrap: wrap;
+    }
+}

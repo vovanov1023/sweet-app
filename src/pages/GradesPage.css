@@ -1,0 +1,87 @@
+/* src/pages/GradesPage.css */
+
+.grades-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Селектор семестру */
+.semester-selector {
+    display: flex;
+    gap: 8px;
+    background: var(--secondary-container);
+    padding: 6px;
+    border-radius: 20px;
+    align-self: flex-start;
+}
+
+.semester-btn {
+    border: none;
+    background: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.semester-btn.active {
+    background: white;
+    color: var(--primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Картка загальної статистики */
+.overall-stats-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.stats-label {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+.stats-value {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Сітка предметів */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 колонка на мобілках */
+    gap: 16px;
+}
+
+/* Адаптив */
+@media (min-width: 768px) {
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* На десктопі (коли є бокове меню) залишаємо 2 колонки */
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
