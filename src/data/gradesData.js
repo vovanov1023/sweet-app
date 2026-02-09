@@ -132,7 +132,7 @@ export const syncGradeFromJournal = (subjectId, date, value, comment = "") => {
     const isEmpty = value.trim() === "";
 
     // 1. Спочатку шукаємо, чи вже є оцінка/пропуск за цю дату
-    const existingGradeIndex = subjectData.semester1.findIndex(g => g.date === date && g.comment === "Виставлено через журнал");
+    const existingGradeIndex = subjectData.semester1.findIndex(g => g.date === date);
     const existingAbsenceIndex = subjectData.semester1_absences.findIndex(a => a.date === date);
 
     // Логіка ВИДАЛЕННЯ (якщо вчитель стер оцінку)
